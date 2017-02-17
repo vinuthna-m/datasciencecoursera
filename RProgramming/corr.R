@@ -1,3 +1,5 @@
+#Function to return vector with correlation values for files in the directory 
+#which have complete observations greater than or equal to the threshold value
 corr <- function(directory, threshold = 0){
   x <- vector(mode = "numeric", length=0)
   temp <- complete(directory, 1:332)
@@ -15,7 +17,8 @@ corr <- function(directory, threshold = 0){
     }
     df <- read.csv(paste(directory,filename,sep = "/"))
     df <- na.omit(df)
-    append(x, cor(df$sulfate,df$nitrate),after = length(x))
+    val <- cor(df$sulfate,df$nitrate)
+    x <- c(x,val)
   }
   x
 }

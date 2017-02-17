@@ -1,3 +1,5 @@
+#Function to count the no of observations in each file specified in id vector which
+#are complete
 complete <- function(directory, id = 1:332){
   rtrnFrame <- data.frame(id = numeric(0), nobs = numeric(0))
   for(f in id){
