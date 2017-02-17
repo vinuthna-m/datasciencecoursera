@@ -23,7 +23,7 @@ pollutantmean <- function(directory, pollutant, id=1:332){
     else{
       filename <- paste(f,".csv",sep = "")
     }
-    #appending data from second file to end of list
+    #appending data from second file to end of id vector
     df <- rbind(df, read.csv(paste(directory,filename,sep = "/")))
   }
   #returning mean value of pollutant specified after removing NA values
