@@ -18,5 +18,6 @@ complete <- function(directory, id = 1:332){
     nobs <- c(f,nrows)
     rtrnFrame[nrow(rtrnFrame) + 1, ] <- nobs
   }
+  #returning data frame with id and number of complete observations(nobs) columns
   rtrnFrame
 }

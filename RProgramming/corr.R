@@ -20,5 +20,6 @@ corr <- function(directory, threshold = 0){
     val <- cor(df$sulfate,df$nitrate)
     x <- c(x,val)
   }
+  #returning vector with correlation values for files with nobs greater than threshold
   x
 }
